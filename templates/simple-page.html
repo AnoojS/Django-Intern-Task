@@ -7,14 +7,9 @@
     <title>Simple-Page</title>
 </head>
 <body>
-    <form action="http://127.0.0.1:8000/simple-api/" method="POST">
+    <form action="" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
-        Title:
-        <input type="text" name="Title" id="Title"><br></br>
-        Image:
-        <input type="file" name="Image" id="Image"><br></br>
-        User:
-        <input type="text" name="User" id="User"><br></br>
+        {{form.as_p}}
         <input type="Submit" name="Submit">
     </form>
 </body>
